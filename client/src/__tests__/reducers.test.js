@@ -35,10 +35,12 @@ const initialState = {
 
 test('UPDATE_PRODUCTS', () => {
     let newState = reducer(initialState, {
+        // our actions
         type: UPDATE_PRODUCTS,
+        // new state, initial state
         products: [{}, {}]
     });
-
+    // type, value
     expect(newState.products.length).toBe(2);
     expect(initialState.products.length).toBe(0);
 });
@@ -48,7 +50,7 @@ test('UPDATE_CATEGORIES', () => {
         type: UPDATE_CATEGORIES,
         categories: [{}, {}]
     });
-
+    // type, value
     expect(newState.categories.length).toBe(2);
     expect(initialState.categories.length).toBe(1);
 });
